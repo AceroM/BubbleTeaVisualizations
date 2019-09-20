@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "bubble tea visualizations",
   "scripts": {
-    "make": "node scripts/yelp.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,6 +34,9 @@
     ]
   },
   "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.2",
     "axios": "^0.19.0",
     "json2csv": "^4.5.3"
   }
