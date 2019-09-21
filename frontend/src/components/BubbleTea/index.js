@@ -9,14 +9,16 @@ import data from './data.json'
 
 function BubbleTea() {
   return (
-    <div className="bubble">
+    <>
       <div className="bubble">
-        <img className="milk" src={milk} />
-        <div className="bubbles-container">
-          <Bubbles data={data} />
+        <div className="bubble">
+          <img className="milk" src={milk} />
+          <div className="bubbles-container">
+            <Bubbles data={data} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -27,6 +28,7 @@ async function yelp(latitude, longitude) {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "frontend", "build")));
 
 app.get("/yelp", async (req, res) => {
   const { lat, lng } = req.query;
@@ -37,6 +39,11 @@ app.get("/yelp", async (req, res) => {
     console.error(err);
     res.status(400).send(err);
   }
+});
+
+app.get("/*", function(req, res) {
+  console.log(path.join(__dirname, "frontend", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 app.listen(5000, () => {

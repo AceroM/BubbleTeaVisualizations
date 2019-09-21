@@ -1,4 +1,5 @@
 .bubble {
+  display: block;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -6,12 +7,12 @@
 
 .milk {
   height: 80%;
-  width: 70%;
+  width: 74%;
 }
 
 .bubbles-container {
   position: absolute;
-  bottom: -300px;
+  bottom: -250px;
   .bubbles {
   }
 }
