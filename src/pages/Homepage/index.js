@@ -23,7 +23,7 @@ class Homepage extends Component {
               placeholder="Enter your location"
             />
           </div>
-          <a href="/map">
+          <a href="/map/">
             <input
               type="submit"
               className="button primary white-color-text large"

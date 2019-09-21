@@ -26,8 +26,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 config.js
-<<<<<<< HEAD
 package-lock.json
-=======
 src/config.js
->>>>>>> master
