@@ -3,6 +3,7 @@
  */
 
 // https://www.yelp.com/developers/documentation/v3/business_search
+const { YELP_TOKEN } = require('../config');
 const axios = require("axios");
 const baseUrl = "https://api.yelp.com/v3";
 const term = encodeURIComponent("Bubble Tea");
