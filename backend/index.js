@@ -30,8 +30,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/yelp", async (req, res) => {
   const { lat, lng } = req.query;
-  console.log(lat)
-  console.log(lng)
   try {
     const data = await yelp(lat, lng);
     res.send(data);

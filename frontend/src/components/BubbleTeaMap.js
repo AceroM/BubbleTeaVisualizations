@@ -16,7 +16,6 @@ class BubbleTeaMap extends Component {
     componentDidMount() {
         const values = queryString.parse(window.location.search);
         let data = []
-        console.log(this.state)
         fetch(`/yelp?lat=${values.lat}&lng=${values.lng}`)
             .then(res => res.json())
             .then(
@@ -31,7 +30,6 @@ class BubbleTeaMap extends Component {
                     this.setState({
                         data: data
                     });
-                    console.log(this.state)
                 }
             )
       }
