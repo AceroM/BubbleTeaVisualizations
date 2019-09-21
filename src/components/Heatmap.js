@@ -3,6 +3,7 @@ import { Map, HeatMap, GoogleApiWrapper } from "google-maps-react";
 const { mapsKey } = require('../config.json');
 
 // can change gradient to bubble tea oriented colors
+// lower the amount of colors in gradient since we only have 50 places
 const gradient = [
   "rgba(0, 255, 255, 0)",
   "rgba(0, 255, 255, 1)",
@@ -25,8 +26,6 @@ class Heatmap extends React.Component {
         super(props);
     }
     render() {
-        console.log("hello")
-        console.log(this.props)
         return (
         <div className="map-container">
             <Map
