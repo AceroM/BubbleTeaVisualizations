@@ -1,4 +1,12 @@
 .bubble {
+  margin-top: 2em;
   margin-bottom: 2em;
   padding-bottom: 2em;
+}
+
+.bubbles {
+  position: absolute;
+  left: 200px;
+  top: 500px;
+  bottom: 0;
 }

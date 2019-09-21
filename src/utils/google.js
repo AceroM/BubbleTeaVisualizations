@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { mapsKey } = require("../config.json");
 
-(async function textToLocation(str = "China") {
+export default async function textToLocation(str = "China") {
   const res = await axios.get(
     `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(
       str
@@ -10,4 +10,4 @@ const { mapsKey } = require("../config.json");
 
   console.log(res.data);
   console.log(res.data.candidates[0].geometry);
-})();
+}

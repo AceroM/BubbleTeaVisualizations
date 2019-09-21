@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import "./Homepage.scss";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // // import Logo from "../../components/Logo";
-// import BubbleTea from "../../components/BubbleTea";
-import LocationSearchInput from '../../components/LocationSearchInput';
+import BubbleTea from "../../components/BubbleTea";
+import LocationSearchInput from "../../components/LocationSearchInput";
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: "",
-    }
+      location: ""
+    };
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
-        [event.target.name]: event.target.value
+      [event.target.name]: event.target.value
     });
-}
+  };
 
   render() {
     return (
@@ -39,7 +39,7 @@ class Homepage extends Component {
               name="location"
               onChange={this.handleChange}
             /> */}
-            <LocationSearchInput/>
+            <LocationSearchInput />
           </div>
           <a href={`/map/${this.state.location}`}>
             <input
@@ -49,7 +49,10 @@ class Homepage extends Component {
             />
           </a>
         </div>
-        {/* <BubbleTea/> */}
+        <br />
+        <br />
+        <br />
+        <BubbleTea />
       </div>
     );
   }
