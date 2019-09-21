@@ -2,6 +2,7 @@ import React, { Component, useEffect } from "react";
 import './Homepage.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Logo from '../../components/Logo';
 import BubbleTea from "../../components/BubbleTea";
 
 class Homepage extends Component {
@@ -12,9 +13,7 @@ class Homepage extends Component {
   render(){
     return (
       <div className="body-wrapper">
-          <div className="grid-container">
-            <a href="/"><img className="logo" src={"/bubble-tea.png"} alt ="logo"/></a>
-          </div>
+          <Logo/>
           <div className ="home-header-box">
             <div>
               <h1>Find Bubble Tea Place Near You</h1>
