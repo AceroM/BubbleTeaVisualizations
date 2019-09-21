@@ -39,21 +39,23 @@ class Homepage extends Component {
               <FontAwesomeIcon icon={faSearch} />
             </span>
             {/* <strong>Enter your location</strong> */}
-            {/* <input
-              className="input-group-field"
-              placeholder="Enter your location"
-              name="location"
-              onChange={this.handleChange}
-            /> */}
+            {/* <a href={`/map/${this.state.location}`}>
+              <input
+                className="input-group-field"
+                placeholder="Enter your location"
+                name="location"
+                onChange={this.handleChange}
+              />
+            </a> */}
             <LocationSearchInput />
           </div>
-          <a href={`/map/${this.state.location}`}>
-            <input
-              type="submit"
-              className="button primary white-color-text large"
-              value="Go"
-            />
-          </a>
+          <input
+            type="submit"
+            placeholder="Enter your location"
+            name="location"
+            className="button primary white-color-text large"
+            value="Go"
+          />
         </div>
         <br />
         <br />

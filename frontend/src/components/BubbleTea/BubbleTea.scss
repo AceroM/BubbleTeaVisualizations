@@ -1,12 +1,17 @@
 .bubble {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding-bottom: 2em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
-.bubbles {
+.milk {
+  height: 80%;
+  width: 70%;
+}
+
+.bubbles-container {
   position: absolute;
-  left: 200px;
-  top: 500px;
-  bottom: 0;
+  bottom: -300px;
+  .bubbles {
+  }
 }
