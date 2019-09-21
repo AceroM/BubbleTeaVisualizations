@@ -41,6 +41,28 @@ app.get("/yelp", async (req, res) => {
   }
 });
 
+app.get("/yelp/reviews", async (req, res) => {
+  reviewDict = {};
+  const { lat, lng } = req.query;
+  try {
+    const data = await yelp(lat, lng);
+    if (data) {
+      for (let place of data) {
+        const reviews = await axios.get(
+          `${baseUrl}/businesses/${place.id}/reviews`,
+          config
+        );
+        for (let review of reviews) {
+        }
+      }
+    }
+    res.send(data);
+  } catch (err) {
+    console.error(err);
+    res.status(400).send(err);
+  }
+});
+
 app.get("/*", function(req, res) {
   console.log(path.join(__dirname, "frontend", "build", "index.html"));
   res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
