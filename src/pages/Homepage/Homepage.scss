@@ -17,6 +17,7 @@
 .grid-container {
   padding-right: .9375rem;
   padding-left: .9375rem;
+  width: 100%;
   a{
     font-family: Verdana, Geneva, sans-serif;
     font-size: 30px;
@@ -27,4 +28,108 @@
     width: 40px;
     padding: 15px;
   }
+}
+
+.home-header-box{
+  h1{
+    font-family: "Aleo","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 900;
+    color: #625772;
+    text-align: center;
+  }
+}
+
+
+.bmb-form-box{
+  background-color: white;
+  font-size:16px;
+  font-weight:400;
+  display: flex;
+  justify-content: center;
+  margin: 0 20vw 0 20vw;
+  box-shadow:rgba(0, 0, 98, 0.1) 0px 3px 23px 10px;
+  border-radius: 15px;
+  strong{
+    border-collapse:collapse;
+    box-sizing:border-box;
+    color:rgb(98, 87, 114);
+    display:inline;
+    font-size:25px;
+    font-style:normal;
+    font-weight:700;
+    line-height:35px;
+    text-align:center;
+    text-rendering:optimizelegibility;
+    text-size-adjust:100%;
+  }
+}
+
+.input-group{
+  display: block;
+  margin: 0;
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.8;
+  color: #333;
+  align-items: stretch;
+  
+  margin: 1em;
+  padding: 1em;
+}
+.input-group-label {
+  padding: 0 1rem;
+}
+
+.input-group-field{
+  flex: 1 1 0px;
+  min-width: 0;
+  border: 1px solid #91899C;
+  background: #fff;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  height: 39px;
+  border-radius: 30px;
+  width: 300px;
+}
+
+input[type=submit]{
+  width: 150px;
+  text-align: center;
+  margin: 2em;
+
+}
+
+.white-color-text {
+  color: #fff;
+  font-size: 15px;
+}
+
+.button{
+  font-weight: 900;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 1rem 0;
+  padding: 0.85em 1em;
+  border: 1px solid transparent;
+  border-radius: 100rem;
+  transition: background-color 0.25s ease-out,color 0.25s ease-out;
+  font-family: inherit;
+  -webkit-appearance: none;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+input:focus{
+  outline:none;
+}
+.button.primary:hover{
+  background-color: #ed3d3d;
+}
+
+.button.primary {
+  background-color: #F38181;
 }

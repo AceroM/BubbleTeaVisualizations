@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+import React from 'react';
+import Homepage from './pages/Homepage';
+import Map from './pages/Map';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+=======
 import React from "react";
 import Homepage from "./pages/Homepage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import logo from "./logo.svg";
+>>>>>>> 7b85a8d73de47733120d95a0f94d06a09cbf69b8
 
 import "./App.css";
 
@@ -9,6 +16,7 @@ function App() {
   return (
     <Router>
       <Route exact path="/" component={Homepage} />
+      <Route exact path="/map" component ={Map} /> 
     </Router>
   );
 }
