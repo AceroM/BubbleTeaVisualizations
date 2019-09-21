@@ -24,7 +24,7 @@ class Homepage extends Component {
               {/* <strong>Enter your location</strong> */}
               <input className = "input-group-field" placeholder="Enter your location" />
             </div>
-            <input type="submit" className= "button primary white-color-text large"value="Go" />
+            <a href='/map'><input type="submit" className= "button primary white-color-text large"value="Go" /></a>
             
           </div>
       </div>

@@ -123,6 +123,9 @@ input[type=submit]{
   text-align: center;
   cursor: pointer;
 }
+input:focus{
+  outline:none;
+}
 .button.primary:hover{
   background-color: #ed3d3d;
 }
