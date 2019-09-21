@@ -6,9 +6,7 @@ import Logo from '../../components/Logo';
 import BubbleTea from "../../components/BubbleTea";
 
 class Homepage extends Component {
-  constructor (){
-    super();
-  }
+ 
 
   render(){
     return (
