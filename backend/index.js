@@ -12,13 +12,8 @@ const term = encodeURIComponent("Bubble Tea");
 const config = {
   headers: { Authorization: "bearer " + YELP_TOKEN }
 };
-const latitude = "40.730610";
-const longitude = "-73.935242";
 
 async function yelp(latitude, longitude) {
-  const description = "My location";
-  latitude = "40.730610"; // COMMENT THIS OUT LATER
-  longitude = "-73.935242"; // COMMENT THIS OUT LATER
   const store = await axios.get(
     `${baseUrl}/businesses/search?term=${term}&latitude=${latitude}&longitude=${longitude}&limit=50`,
     config
@@ -34,8 +29,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/yelp", async (req, res) => {
+  const { lat, lng } = req.query;
   try {
-    const data = await yelp();
+    const data = await yelp(lat, lng);
     res.send(data);
   } catch (err) {
     console.error(err);

@@ -1,41 +1,50 @@
 import React, { Component } from 'react';
 import Heatmap from './Heatmap';
 import queryString from 'query-string';
-
 const axios = require("axios");
-const { mapsKey } = require("../config.json");
+// const { YELP_TOKEN, mapsKey } = require("../config.json");
 
 class BubbleTeaMap extends Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
         this.state = {
             // default lat lng to NYC BABY
-            lat: 40.7127753,
-            lng: -74.0059728,
-            data: [
-                { lat: 37.782551, lng: -122.44536800000003 },
-                { lat: 37.782745, lng: -122.44458600000002 },
-                { lat: 37.782842, lng: -122.44368800000001 },
-            ]
+            data: []
         }
     }
 
     componentDidMount() {
         const values = queryString.parse(window.location.search);
-        this.setState ({
-            lat: values.lat,
-            lng: values.lng
-        });
+        let data = []
+        fetch(`/yelp?lat=${values.lat}&lng=${values.lng}`)
+            .then(res => res.json())
+            .then(
+                businesses => {
+                    for (let i = 0; i < businesses.length; i++) {
+                        const latLng = {
+                            lat: businesses[i].coordinates.latitude,
+                            lng: businesses[i].coordinates.longitude
+                        }
+                        data.push(latLng)
+                    };
+                    this.setState({
+                        data: data
+                    });
+                }
+            )
       }
 
     render() {
+        const values = queryString.parse(window.location.search);
+        const { data } = this.state;
         return (
+            (!!data.length) ? (
             <Heatmap 
-                center={{ lat: this.state.lat, lng: this.state.lng }}
-                zoom={14}
-                positions={this.state.data} 
+                center={{ lat: values.lat, lng: values.lng }}
+                zoom={12}
+                positions={data} 
             />
+            ) : "Loading"
         )
     }
 }
