@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import textToLocation from "../../utils/google";
 import "./Map.scss";
 
 function Map({ location }) {

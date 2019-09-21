@@ -3,7 +3,7 @@ import "./Homepage.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // // import Logo from "../../components/Logo";
-// import BubbleTea from "../../components/BubbleTea";
+import BubbleTea from "../../components/BubbleTea";
 
 class Homepage extends Component {
   render() {
@@ -31,7 +31,10 @@ class Homepage extends Component {
             />
           </a>
         </div>
-        {/* <BubbleTea/> */}
+        <br />
+        <br />
+        <br />
+        <BubbleTea />
       </div>
     );
   }
