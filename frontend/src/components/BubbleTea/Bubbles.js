@@ -1,83 +1,83 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 
-const d3 = require("d3");
+const d3 = require('d3')
 
-const forceStrength = 0.03;
+const forceStrength = 0.03
 
-const width = 940;
-const height = 600;
-const center = { x: width / 2, y: height / 2 };
+const width = 940
+const height = 600
+const center = { x: width / 2, y: height / 2 }
 
 const colorFn = d3
   .scaleLinear()
   .domain([7, 15])
-  .range(["#dcdbe8", "#69bf64", "#F0DFC5", "#fbc4a7"]);
+  .range(['#dcdbe8', '#F0DFC5', '#fbc4a7'])
 
 function startSimulation(bubbles, updateState) {
   function charge(d) {
-    return -Math.pow(d.radius, 2.0) * forceStrength;
+    return -Math.pow(d.radius, 2.0) * forceStrength
   }
 
   const simulation = d3
     .forceSimulation()
     .velocityDecay(0.2)
     .force(
-      "x",
+      'x',
       d3
         .forceX()
         .strength(forceStrength)
         .x(center.x)
     )
     .force(
-      "y",
+      'y',
       d3
         .forceY()
         .strength(forceStrength)
         .y(center.y)
     )
-    .force("charge", d3.forceManyBody().strength(charge))
-    .on("tick", () => updateState(bubbles))
-    .stop();
+    .force('charge', d3.forceManyBody().strength(charge))
+    .on('tick', () => updateState(bubbles))
+    .stop()
 
-  simulation.nodes(bubbles);
-  simulation.alpha(1).restart();
+  simulation.nodes(bubbles)
+  simulation.alpha(1).restart()
 }
 
 function formatBubbleData(rawData) {
   const maxValue = d3.max(rawData, function(d) {
-    return +d.value;
-  });
+    return +d.value
+  })
 
   const radiusScale = d3
     .scalePow()
     .exponent(0.5)
     .range([2, 85])
-    .domain([0, maxValue]);
+    .domain([0, maxValue])
 
   const myBubbles = rawData.map(d => ({
     name: d.name,
     value: d.value,
     radius: radiusScale(d.value),
     x: Math.random() * width,
-    y: Math.random() * height
-  }));
+    y: Math.random() * height,
+  }))
 
   // sort them to prevent occlusion of smaller nodes.
   myBubbles.sort(function(a, b) {
-    return b.value - a.value;
-  });
+    return b.value - a.value
+  })
 
-  return myBubbles;
+  return myBubbles
 }
 
 export default function Bubbles({ data }) {
-  const [bubbles, setBubbles] = useState([]);
+  const [bubbles, setBubbles] = useState([])
 
   useEffect(() => {
     startSimulation(formatBubbleData(data), bubbles => {
-      setBubbles(() => [...bubbles]);
-    });
-  }, [data]);
+      setBubbles(() => [...bubbles])
+    })
+  }, [data])
 
   return (
     <svg className="bubbles" width={width} height={height}>
@@ -94,8 +94,8 @@ export default function Bubbles({ data }) {
           >
             <title>{bubble.name}</title>
           </circle>
-        );
+        )
       })}
     </svg>
-  );
+  )
 }
