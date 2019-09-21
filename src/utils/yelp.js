@@ -6,14 +6,17 @@
 const axios = require("axios");
 const baseUrl = "https://api.yelp.com/v3";
 const term = encodeURIComponent("Bubble Tea");
+
+const { YELP_TOKEN } = require("../config.json");
+
 const config = {
-  headers: { Authorization: "bearer " + process.env.YELP_TOKEN }
+  headers: { Authorization: "bearer " + YELP_TOKEN }
 };
 const latitude = "40.730610";
 const longitude = "-73.935242";
 
 (async function YelpToCsv(latitude, longitude) {
-  const description = "My location"
+  const description = "My location";
   latitude = "40.730610"; // COMMENT THIS OUT LATER
   longitude = "-73.935242"; // COMMENT THIS OUT LATER
   const store = await axios.get(
