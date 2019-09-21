@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // // import Logo from "../../components/Logo";
-// import BubbleTea from "../../components/BubbleTea";
+import BubbleTea from "../../components/BubbleTea";
 import LocationSearchInput from "../../components/LocationSearchInput";
 
 class Homepage extends Component {
