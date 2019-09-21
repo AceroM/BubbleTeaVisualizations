@@ -1,13 +1,14 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import './Homepage.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import BubbleTea from "../../components/BubbleTea";
 
 class Homepage extends Component {
   constructor (){
     super();
   }
+
   render(){
     return (
       <div className="body-wrapper">
@@ -28,35 +29,11 @@ class Homepage extends Component {
             <a href='/map'><input type="submit" className= "button primary white-color-text large"value="Go" /></a>
             
           </div>
+          {/* <BubbleTea/> */}
       </div>
     )
   }
-  
+  // useEffect(() => {}, []);
+
 }
 export default Homepage;
-=======
-import React, { useEffect } from "react";
-import BubbleTea from "../../components/BubbleTea";
-
-import "./Homepage.scss";
-
-const Homepage = () => {
-  useEffect(() => {}, []);
-
-  return (
-    <div className="body-wrapper">
-      <div className="bmb-header">
-        <div className="grid-container">
-          <a href="/">
-            <img className="logo" src={"/bubble-tea.png"} alt="logo" />
-          </a>
-        </div>
-      </div>
-      <BubbleTea />
-      <br />
-      <br />
-    </div>
-  );
-};
-export default Homepage;
->>>>>>> 7b85a8d73de47733120d95a0f94d06a09cbf69b8
