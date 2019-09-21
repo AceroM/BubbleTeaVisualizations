@@ -7,7 +7,7 @@ function Map({ location }) {
   const maplocation = location.pathname.replace("/map/", "");
   return (
     <div className="body-wrapper">
-      <h1> hello </h1>
+      <h1>Bubble Tea Heatmap</h1>
       <BubbleTeaMap location={maplocation} />
     </div>
   );

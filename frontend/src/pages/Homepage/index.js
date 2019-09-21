@@ -31,7 +31,7 @@ class Homepage extends Component {
     return (
       <div className="home-wrapper">
         <div>
-          <h1>Find Bubble Tea Place Near You</h1>
+          <h1>Find Bubble Tea Places Near You</h1>
         </div>
         <div className="bmb-form-box">
           <div className="input-group">
