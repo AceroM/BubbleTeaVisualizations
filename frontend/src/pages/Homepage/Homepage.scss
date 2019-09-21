@@ -23,7 +23,9 @@
 }
 
 .input-group {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   margin: 0;
   font-size: 0.875rem;
   font-weight: normal;
@@ -51,7 +53,7 @@
   width: 300px;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   width: 150px;
   text-align: center;
   margin: 2em;
