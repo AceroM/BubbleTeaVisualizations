@@ -1,16 +1,29 @@
-import React from 'react';
-import Homepage from './pages/Homepage';
-import Map from './pages/Map';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import NotFound from "./pages/NotFound";
+import Map from "./pages/Map";
 
-import "./App.css";
+import Logo from "./components/Logo";
+// import Logo from "../../components/Logo";
+// import BubbleTea from "../../components/BubbleTea";
+
+import "./App.scss";
 
 function App() {
   return (
-    <Router>
-      <Route exact path="/" component={Homepage} />
-      <Route exact path="/map" component ={Map} /> 
-    </Router>
+    <div className="app">
+      <div className="body-wrapper">
+        <Logo />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/map/:location" component={Map} />
+            <Router path="/" component={NotFound} />
+          </Switch>
+        </Router>
+      </div>
+    </div>
   );
 }
 
