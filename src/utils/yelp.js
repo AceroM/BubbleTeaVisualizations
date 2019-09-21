@@ -8,8 +8,6 @@ const axios = require("axios");
 const baseUrl = "https://api.yelp.com/v3";
 const term = encodeURIComponent("Bubble Tea");
 
-const { YELP_TOKEN } = require("../config.json");
-
 const config = {
   headers: { Authorization: "bearer " + YELP_TOKEN }
 };
@@ -27,9 +25,18 @@ const longitude = "-73.935242";
   let businesses = [];
   businesses.push(store.data.businesses);
   businesses = businesses.flat();
-  businesses = [...new Set(businesses)];
+  // businesses = [...new Set(businesses)];
   console.log("businesses:");
-  console.log(businesses);
+  // console.log(businesses);
   console.log(`--------------`);
+  let data = []
+  for (let i = 0; i < businesses.length; i++) {
+    const latLng = {
+      lat: businesses[i].coordinates.latitude,
+      lng: businesses[i].coordinates.longitude
+    }
+    data.push(latLng)
+  }
+  console.log(data)
   console.log(businesses.length); // should be 50 since we set the limit to 50
 })();
