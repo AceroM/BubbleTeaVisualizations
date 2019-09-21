@@ -1,4 +1,30 @@
+.body-wrapper {
+    background: url(https://bobameetsbagel.com/images/bg-patterns/bg-pattern-dark.png)
+      repeat center center;
+    background-color: #fefaec;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .grid-container {
   padding-right: .9375rem;
   padding-left: .9375rem;
+  a{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    color: white;
+  }  
+  .logo{
+    height: 60px;
+    width: 40px;
+    padding: 15px;
+  }
 }

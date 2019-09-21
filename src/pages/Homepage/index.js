@@ -4,9 +4,15 @@ import './Homepage.scss';
 const Homepage = () => {
 
   return (
-    <div className="grid-container">
-      <a href="/">Stateastics</a>
+    <div className="body-wrapper">
+      <div className="bmb-header">
+        <div className="grid-container">
+          <a href="/"><img className="logo" src={"/bubble-tea.png"} alt ="logo"/></a>
+        </div>
+      </div>
+      
     </div>
+    
 
   )
 }
