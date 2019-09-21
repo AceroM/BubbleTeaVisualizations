@@ -3,9 +3,7 @@
  */
 
 // https://www.yelp.com/developers/documentation/v3/business_search
-// import { YELP_TOKEN } from '../config.js';
-
-const YELP_TOKEN = "bWEA1mx1RmtAy7OnR38cIb8oPN6R3kB-xSzkAQdYIMq6FBD8MCizHooXd0RCwK2CPB06I8HX5y9kLJm4Rwg1RTPe-o-fDnR1hdYYGoCWAhVk_XnzrIMwWS7z43x-XXYx";
+const { YELP_TOKEN } = require('../config');
 const axios = require("axios");
 const baseUrl = "https://api.yelp.com/v3";
 const term = encodeURIComponent("Bubble Tea");
