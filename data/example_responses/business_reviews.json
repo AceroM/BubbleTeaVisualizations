@@ -1,0 +1,45 @@
+{
+  "reviews": [
+    {
+      "id": "EPtAC_AjAI8tMngXKTW53Q",
+      "url": "https://www.yelp.com/biz/boba-guys-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&hrid=EPtAC_AjAI8tMngXKTW53Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+      "text": "I've never seen so many options for bubble tea. \n\nI usually get the same bubble tea every time, the classic taro. They actually didn't have it, so they...",
+      "rating": 5,
+      "time_created": "2019-09-15 12:27:31",
+      "user": {
+        "id": "0kUIEzQyiqo56kpBrCUXmg",
+        "profile_url": "https://www.yelp.com/user_details?userid=0kUIEzQyiqo56kpBrCUXmg",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/photo/JgtskXsEdTb0WxLDMfG0LA/o.jpg",
+        "name": "Sheynelle S."
+      }
+    },
+    {
+      "id": "tqfrlLL9qKfZ-fg8GBaAGQ",
+      "url": "https://www.yelp.com/biz/boba-guys-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&hrid=tqfrlLL9qKfZ-fg8GBaAGQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+      "text": "Started with the strawberry matcha latte and jasmine milk tea, will be back to try it all. Perfect boba, flavorful tea and quality ingredients. I usually...",
+      "rating": 5,
+      "time_created": "2019-08-18 13:36:06",
+      "user": {
+        "id": "7O-isQNNwCqKduuzEv0T1A",
+        "profile_url": "https://www.yelp.com/user_details?userid=7O-isQNNwCqKduuzEv0T1A",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/photo/d21KVdKp8lAE8I0nk0SN8w/o.jpg",
+        "name": "Allen L."
+      }
+    },
+    {
+      "id": "zufiV0Yy1Lb25hW5kE5Mhw",
+      "url": "https://www.yelp.com/biz/boba-guys-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&hrid=zufiV0Yy1Lb25hW5kE5Mhw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+      "text": "update:\n\nthey do offer large sizes, but i stand by what i said about the steep pricing on these bad boys. \n\ni now go for 50% sugar, hojicha with oat milk,...",
+      "rating": 5,
+      "time_created": "2019-08-17 15:46:40",
+      "user": {
+        "id": "0O7O53dkw1i7hQVdFdtn2A",
+        "profile_url": "https://www.yelp.com/user_details?userid=0O7O53dkw1i7hQVdFdtn2A",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/photo/b0NEUCpny0TNf0DqrHES9A/o.jpg",
+        "name": "Ruby K."
+      }
+    }
+  ],
+  "total": 650,
+  "possible_languages": ["en"]
+}

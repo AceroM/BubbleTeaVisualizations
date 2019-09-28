@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 // // import Logo from "../../components/Logo";
+// import Card from '../../components/BubbleCard'
 
 import LocationSearchInput from '../../components/LocationSearchInput'
 
@@ -12,6 +13,7 @@ class Homepage extends Component {
     super(props)
     this.state = {
       location: '',
+      err: '',
     }
   }
 
@@ -21,24 +23,26 @@ class Homepage extends Component {
     })
   }
 
-  componentDidMount() {
-    fetch('/yelp')
-      .then(res => res.json())
-      .then(data => console.log(data))
+  setErr = err => {
+    this.setState({ err })
   }
 
+  componentDidMount() {}
+
   render() {
+    const { err } = this.state
     return (
       <div className="home-wrapper">
         <div>
           <h1>Find Bubble Tea Places Near You</h1>
+          {err && <h1 style={{ color: 'red' }}>{err}</h1>}
         </div>
         <div className="bmb-form-box">
           <div className="input-group">
             <span className="input-group-label">
               <FontAwesomeIcon icon={faSearch} />
             </span>
-            <LocationSearchInput />
+            <LocationSearchInput setErr={this.setErr} />
           </div>
           <input
             type="submit"
@@ -48,9 +52,7 @@ class Homepage extends Component {
             value="Go"
           />
         </div>
-        <br />
-        <br />
-        <br />
+        {/* <Card title="testing" description="this" /> */}
       </div>
     )
   }

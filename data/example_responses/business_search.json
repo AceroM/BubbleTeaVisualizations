@@ -1,0 +1,762 @@
+[
+  {
+    "id": "o9WQ9PilJE1x1OaRc8LFng",
+    "alias": "koi-thé-new-york",
+    "name": "KOI Thé",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/5G5Glrrs6ixAdThbKfkvSg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/koi-th%C3%A9-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 30,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "tea",
+        "title": "Tea Rooms"
+      }
+    ],
+    "rating": 3.5,
+    "coordinates": {
+      "latitude": 40.7293798341543,
+      "longitude": -74.0012164783664
+    },
+    "transactions": [],
+    "location": {
+      "address1": "189 Bleecker St",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10012",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["189 Bleecker St", "New York, NY 10012"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 1889.2922266830576
+  },
+  {
+    "id": "DbhBca8LzskjS0B-L4QfZg",
+    "alias": "tiger-sugar-new-york",
+    "name": "Tiger Sugar",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4BpZkTZheF7mQ5AzS2FBhA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/tiger-sugar-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 46,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.717151,
+      "longitude": -73.998231
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "197 Canal St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["197 Canal St", "New York, NY 10013"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 813.5836530692326
+  },
+  {
+    "id": "_fP2QicVgPLZyL8s6M84Ig",
+    "alias": "boba-guys-new-york-6",
+    "name": "Boba Guys",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/NgMy1Cv51qk8nPOE_mkS8w/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/boba-guys-new-york-6?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 404,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 40.71897,
+      "longitude": -74.00102
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "265 Canal St",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["265 Canal St", "New York, NY 10013"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 816.8136999764603
+  },
+  {
+    "id": "hP-2IqCLhyiNIsiEavH6KA",
+    "alias": "tsaôcaa-and-bào-new-york-2",
+    "name": "Tsaôcaa & Bào",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tEfz2NFeCJNAdQYR-G6biA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/tsa%C3%B4caa-and-b%C3%A0o-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 131,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "desserts",
+        "title": "Desserts"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.71938,
+      "longitude": -73.98882
+    },
+    "transactions": ["delivery", "pickup"],
+    "location": {
+      "address1": "109 Ludlow St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10002",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["109 Ludlow St", "New York, NY 10002"]
+    },
+    "phone": "+16467670084",
+    "display_phone": "(646) 767-0084",
+    "distance": 1612.961264479466
+  },
+  {
+    "id": "JYNbpl4TJQNXboGYWYo0zA",
+    "alias": "tea-la-ra-new-york",
+    "name": "Tea La Ra",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/bcSDDuD9gw8Aoqht9mVdoA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/tea-la-ra-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 5,
+    "categories": [
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      },
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 5.0,
+    "coordinates": {
+      "latitude": 40.7226,
+      "longitude": -74.004
+    },
+    "transactions": ["delivery", "pickup"],
+    "location": {
+      "address1": "46 Grand St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["46 Grand St", "New York, NY 10013"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 1110.8384812401466
+  },
+  {
+    "id": "0mmYkkRgOOs312AkGsfO4Q",
+    "alias": "gong-cha-new-york-26",
+    "name": "Gong Cha",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/b-lmkDOz0Qzc8r5-IVPPaQ/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/gong-cha-new-york-26?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 39,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.7104199,
+      "longitude": -74.0090122
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "200 Broadway",
+      "address2": null,
+      "address3": "Fulton Center",
+      "city": "New York",
+      "zip_code": "10038",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["200 Broadway", "Fulton Center", "New York, NY 10038"]
+    },
+    "phone": "+12122271024",
+    "display_phone": "(212) 227-1024",
+    "distance": 366.35007764944135
+  },
+  {
+    "id": "e0-hOKiy6vdETV0olKVsEg",
+    "alias": "coco-fresh-tea-and-juice-new-york-7",
+    "name": "CoCo Fresh Tea & Juice",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/fp0Mb5Hr5kWkfTpSpP6-3g/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/coco-fresh-tea-and-juice-new-york-7?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 99,
+    "categories": [
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      },
+      {
+        "alias": "juicebars",
+        "title": "Juice Bars & Smoothies"
+      },
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 3.5,
+    "coordinates": {
+      "latitude": 40.70983,
+      "longitude": -74.0091
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "12 John St",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10038",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["12 John St", "New York, NY 10038"]
+    },
+    "phone": "+17188773901",
+    "display_phone": "(718) 877-3901",
+    "distance": 422.04786065436906
+  },
+  {
+    "id": "OQEk6ygOch6EZrBs-lwUiw",
+    "alias": "hui-tea-new-york",
+    "name": "Hui Tea",
+    "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EFaeKHZu2me5Umiy804iwg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/hui-tea-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 50,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 40.7178490006422,
+      "longitude": -74.0003345534205
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "240A Canal St",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["240A Canal St", "New York, NY 10013"]
+    },
+    "phone": "+19172658697",
+    "display_phone": "(917) 265-8697",
+    "distance": 737.6371348158175
+  },
+  {
+    "id": "V49pn2KD8848gpSRMqLIww",
+    "alias": "bar-pa-tea-new-york-2",
+    "name": "Bar Pa Tea",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/hLHSu9DSseN8WyIu9I3uqQ/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/bar-pa-tea-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 751,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "icecream",
+        "title": "Ice Cream & Frozen Yogurt"
+      },
+      {
+        "alias": "tea",
+        "title": "Tea Rooms"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.72136,
+      "longitude": -73.99675
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "85 Kenmare St",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10012",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["85 Kenmare St", "New York, NY 10012"]
+    },
+    "phone": "+19172615550",
+    "display_phone": "(917) 261-5550",
+    "distance": 1236.4430137806053
+  },
+  {
+    "id": "7Dp291PAk4ufpk6iQJpwsw",
+    "alias": "mi-tea-new-york-4",
+    "name": "Mi Tea",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/rjpxVM_GyRTzkNjxj6h76Q/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/mi-tea-new-york-4?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 44,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 40.72965,
+      "longitude": -74.00092
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "101 MacDougal St",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10012",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["101 MacDougal St", "New York, NY 10012"]
+    },
+    "phone": "+12123803998",
+    "display_phone": "(212) 380-3998",
+    "distance": 1924.035677913829
+  },
+  {
+    "id": "AqBxeLhP5dDnLqmbpdRN-Q",
+    "alias": "tea-i-y-new-york",
+    "name": "Tea I Y",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/d8mlQKX-_UHU8RlKJk0AMw/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/tea-i-y-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 33,
+    "categories": [
+      {
+        "alias": "tea",
+        "title": "Tea Rooms"
+      },
+      {
+        "alias": "desserts",
+        "title": "Desserts"
+      },
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 40.71697,
+      "longitude": -73.99471
+    },
+    "transactions": [],
+    "location": {
+      "address1": "124B Hester St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10003",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["124B Hester St", "New York, NY 10003"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 1055.8070235003593
+  },
+  {
+    "id": "KOK_VAKTC7TzZeve2EwCoA",
+    "alias": "kung-fu-tea-new-york-27",
+    "name": "Kung Fu Tea",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MyzZCcdgzhfHPVLLjOSJKw/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/kung-fu-tea-new-york-27?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 64,
+    "categories": [
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      },
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "juicebars",
+        "title": "Juice Bars & Smoothies"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.7051869,
+      "longitude": -74.014208
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "9 Broadway",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10004",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["9 Broadway", "New York, NY 10004"]
+    },
+    "phone": "+12127855688",
+    "display_phone": "(212) 785-5688",
+    "distance": 1092.6125124989187
+  },
+  {
+    "id": "IGHPLcSqPNnPuULrRwGq6A",
+    "alias": "hello-always-tea-new-york",
+    "name": "Hello Always Tea",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/JiWEipmlLdp-AeQxAo0G0w/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/hello-always-tea-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 65,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 5.0,
+    "coordinates": {
+      "latitude": 40.726534,
+      "longitude": -73.9907736
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "60 East 4th St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10003",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["60 East 4th St", "New York, NY 10003"]
+    },
+    "phone": "+16464916460",
+    "display_phone": "(646) 491-6460",
+    "distance": 1995.336447765045
+  },
+  {
+    "id": "LZGZgJj7BBxBxkU5O_g-ow",
+    "alias": "juice-vitality-new-york-2",
+    "name": "Juice Vitality",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/SgojVU_iUZzNYhC-EApJ8w/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/juice-vitality-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 11,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "juicebars",
+        "title": "Juice Bars & Smoothies"
+      }
+    ],
+    "rating": 5.0,
+    "coordinates": {
+      "latitude": 40.704818,
+      "longitude": -74.012382
+    },
+    "transactions": [],
+    "price": "$$",
+    "location": {
+      "address1": "18 Beaver St",
+      "address2": null,
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10004",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["18 Beaver St", "New York, NY 10004"]
+    },
+    "phone": "+19176059105",
+    "display_phone": "(917) 605-9105",
+    "distance": 1038.5105098074703
+  },
+  {
+    "id": "9_PfzNxJP2iqqJs8hDubgw",
+    "alias": "boba-guys-new-york",
+    "name": "Boba Guys",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/_Y3zIhRRf2Nb9X3GG_PijA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/boba-guys-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 650,
+    "categories": [
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      },
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.720657,
+      "longitude": -73.984542
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "23 Clinton St",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10002",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["23 Clinton St", "New York, NY 10002"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 2007.2100171363934
+  },
+  {
+    "id": "SqVHETmH6bf3rPKmdftvvw",
+    "alias": "ten-rens-tea-time-new-york-2",
+    "name": "Ten Ren's Tea Time",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/VXV4CnpyE2pzjO0DmoKbdg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/ten-rens-tea-time-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 631,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.7163819,
+      "longitude": -73.9982683
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "73 Mott St",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["73 Mott St", "New York, NY 10013"]
+    },
+    "phone": "+12127327178",
+    "display_phone": "(212) 732-7178",
+    "distance": 763.253493221425
+  },
+  {
+    "id": "KnyqjLG2x2VUToEzeVfFFA",
+    "alias": "the-alley-lujiaoxiang-new-york-2",
+    "name": "The Alley LuJiaoXiang",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/eogMCiYgUzAEpnKYeg3uig/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/the-alley-lujiaoxiang-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 60,
+    "categories": [
+      {
+        "alias": "taiwanese",
+        "title": "Taiwanese"
+      },
+      {
+        "alias": "coffee",
+        "title": "Coffee & Tea"
+      },
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 3.5,
+    "coordinates": {
+      "latitude": 40.7292878143919,
+      "longitude": -73.9909341307257
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "68 Cooper Sq",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10003",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["68 Cooper Sq", "New York, NY 10003"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 2232.019126203274
+  },
+  {
+    "id": "Xn4JkQh7qVkJu74M8sDu1A",
+    "alias": "diu-tea-new-york-2",
+    "name": "DIU Tea",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/L84cg5I-h_I1bXSJri80kg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/diu-tea-new-york-2?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 29,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 40.72102,
+      "longitude": -73.98864
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "160 Orchard St",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10002",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["160 Orchard St", "New York, NY 10002"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 1727.781592313863
+  },
+  {
+    "id": "WxNlqGSsj_2TCodkx9Sa4A",
+    "alias": "vivi-bubble-tea-new-york-6",
+    "name": "Vivi Bubble Tea",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ZpeGN3IMIy85LBksZhA3hA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/vivi-bubble-tea-new-york-6?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 634,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.715099,
+      "longitude": -73.997535
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "49 Bayard St",
+      "address2": "",
+      "address3": "",
+      "city": "New York",
+      "zip_code": "10013",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["49 Bayard St", "New York, NY 10013"]
+    },
+    "phone": "+12125666833",
+    "display_phone": "(212) 566-6833",
+    "distance": 763.0371951413646
+  },
+  {
+    "id": "EsYmapR5ONZEwxuLvyI1-g",
+    "alias": "vivi-bubble-tea-new-york-31",
+    "name": "Vivi Bubble Tea",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/nszhQSN1HvVj1TQW4TzZNQ/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/vivi-bubble-tea-new-york-31?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+    "review_count": 34,
+    "categories": [
+      {
+        "alias": "bubbletea",
+        "title": "Bubble Tea"
+      },
+      {
+        "alias": "taiwanese",
+        "title": "Taiwanese"
+      }
+    ],
+    "rating": 4.0,
+    "coordinates": {
+      "latitude": 40.7161132862826,
+      "longitude": -74.004860621059
+    },
+    "transactions": ["delivery", "pickup"],
+    "price": "$",
+    "location": {
+      "address1": "325 Broadway",
+      "address2": "",
+      "address3": null,
+      "city": "New York",
+      "zip_code": "10007",
+      "country": "US",
+      "state": "NY",
+      "display_address": ["325 Broadway", "New York, NY 10007"]
+    },
+    "phone": "+12129620033",
+    "display_phone": "(212) 962-0033",
+    "distance": 382.7695977757459
+  }
+]

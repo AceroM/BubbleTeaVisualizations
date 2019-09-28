@@ -26,7 +26,10 @@ class LocationSearchInput extends React.Component {
           lng: latLng.lng,
         })
       })
-      .catch(error => console.error('Error', error))
+      .catch(error => {
+        console.error('Error', error)
+        this.setState({ isRedirect: true })
+      })
   }
 
   render() {

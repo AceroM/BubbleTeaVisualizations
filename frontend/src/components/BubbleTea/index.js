@@ -14,7 +14,7 @@ function BubbleTea() {
         <div className="bubble">
           <img className="milk" src={milk} />
           <div className="bubbles-container">
-            <Bubbles data={data} />
+            {/* <Bubbles data={data} /> */}
           </div>
         </div>
       </div>

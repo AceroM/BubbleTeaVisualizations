@@ -1,0 +1,95 @@
+{
+  "id": "DbhBca8LzskjS0B-L4QfZg",
+  "alias": "tiger-sugar-new-york",
+  "name": "Tiger Sugar",
+  "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4BpZkTZheF7mQ5AzS2FBhA/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "url": "https://www.yelp.com/biz/tiger-sugar-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=JybKhDXlJ_aJtslAdUaC1w",
+  "phone": "",
+  "display_phone": "",
+  "review_count": 46,
+  "categories": [
+    {
+      "alias": "bubbletea",
+      "title": "Bubble Tea"
+    }
+  ],
+  "rating": 4.0,
+  "location": {
+    "address1": "197 Canal St",
+    "address2": null,
+    "address3": "",
+    "city": "New York",
+    "zip_code": "10013",
+    "country": "US",
+    "state": "NY",
+    "display_address": ["197 Canal St", "New York, NY 10013"],
+    "cross_streets": "Walker St & Mulberry St"
+  },
+  "coordinates": {
+    "latitude": 40.717151,
+    "longitude": -73.998231
+  },
+  "photos": [
+    "https://s3-media3.fl.yelpcdn.com/bphoto/4BpZkTZheF7mQ5AzS2FBhA/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/BTxeQoG_YdyREqt6ILUSWw/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/n60YGvaISCx3XoUxV7n1zA/o.jpg"
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1100",
+          "end": "2130",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false
+    }
+  ],
+  "transactions": [],
+  "messaging": {
+    "url": "https://www.yelp.com/raq/tiger-sugar-new-york?adjust_creative=JybKhDXlJ_aJtslAdUaC1w&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=JybKhDXlJ_aJtslAdUaC1w#popup%3Araq",
+    "use_case_text": "Message the Business"
+  }
+}
