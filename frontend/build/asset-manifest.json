@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/AceroM/BubbleTeaVisualizations/static/css/main.6a8bed00.chunk.css",
-    "main.js": "/AceroM/BubbleTeaVisualizations/static/js/main.0d57664d.chunk.js",
-    "main.js.map": "/AceroM/BubbleTeaVisualizations/static/js/main.0d57664d.chunk.js.map",
-    "runtime-main.js": "/AceroM/BubbleTeaVisualizations/static/js/runtime-main.a2a21118.js",
-    "runtime-main.js.map": "/AceroM/BubbleTeaVisualizations/static/js/runtime-main.a2a21118.js.map",
-    "static/js/2.dda10629.chunk.js": "/AceroM/BubbleTeaVisualizations/static/js/2.dda10629.chunk.js",
-    "static/js/2.dda10629.chunk.js.map": "/AceroM/BubbleTeaVisualizations/static/js/2.dda10629.chunk.js.map",
-    "index.html": "/AceroM/BubbleTeaVisualizations/index.html",
-    "precache-manifest.19ae1305623fd05a9ad2372d2cf88457.js": "/AceroM/BubbleTeaVisualizations/precache-manifest.19ae1305623fd05a9ad2372d2cf88457.js",
-    "service-worker.js": "/AceroM/BubbleTeaVisualizations/service-worker.js",
-    "static/css/main.6a8bed00.chunk.css.map": "/AceroM/BubbleTeaVisualizations/static/css/main.6a8bed00.chunk.css.map",
-    "static/media/App.scss": "/AceroM/BubbleTeaVisualizations/static/media/bg-pattern-dark.9b0060a1.png",
-    "static/media/loading.png": "/AceroM/BubbleTeaVisualizations/static/media/loading.4511a8b2.png",
-    "static/media/milk.svg": "/AceroM/BubbleTeaVisualizations/static/media/milk.45691eb3.svg"
+    "main.css": "/static/css/main.03f701b4.chunk.css",
+    "main.js": "/static/js/main.a3484f7c.chunk.js",
+    "main.js.map": "/static/js/main.a3484f7c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.64229f89.js",
+    "runtime-main.js.map": "/static/js/runtime-main.64229f89.js.map",
+    "static/js/2.e063033d.chunk.js": "/static/js/2.e063033d.chunk.js",
+    "static/js/2.e063033d.chunk.js.map": "/static/js/2.e063033d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e47a209707e200bed36227238327533d.js": "/precache-manifest.e47a209707e200bed36227238327533d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.03f701b4.chunk.css.map": "/static/css/main.03f701b4.chunk.css.map",
+    "static/media/App.scss": "/static/media/bg-pattern-dark.9b0060a1.png",
+    "static/media/loading.png": "/static/media/loading.4511a8b2.png",
+    "static/media/milk.svg": "/static/media/milk.45691eb3.svg",
+    "static/media/stateastics.png": "/static/media/stateastics.a596b236.png"
   }
 }

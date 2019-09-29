@@ -1,39 +1,7 @@
 {
-  "name": "bubbleteavisualizations",
-  "proxy": "http://localhost:5000/",
-  "version": "1.0.0",
-  "description": "bubble tea visualizations",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AceroM/BubbleTeaVisualizations.git"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AceroM/BubbleTeaVisualizations/issues"
-  },
-  "homepage": "https://github.com/AceroM/BubbleTeaVisualizations#readme",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.24",
     "@fortawesome/free-solid-svg-icons": "^5.11.1",
@@ -52,5 +20,26 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2",
     "rebass": "^4.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
