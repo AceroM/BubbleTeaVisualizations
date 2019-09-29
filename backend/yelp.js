@@ -1,4 +1,7 @@
 const { YELP_TOKEN } = require("./config.json");
+const fs = require("fs");
+const coords = require("./hexGridCoords.json");
+const filteredB = require("./filteredB.json");
 
 const axios = require("axios");
 const baseUrl = "https://api.yelp.com/v3";
@@ -26,17 +29,15 @@ async function yelp(latitude, longitude) {
 }
 
 async function getNYCData() {
-  // latitude=40.712776&longitude=-74.005974
-  // 40.765°N 73.805°W
-  const locations = [
-    ["40.712776", "-74.005974", ""],
-    ["40.765", "-73.805", ""]
-  ];
+  // const locations = [
+  // ["40.712776", "-74.005974", ""],
+  // ["40.765", "-73.805", ""]
+  // ];
   let businesses = [];
-  for (let loc of locations) {
+  for (let loc of coords) {
     const store = await axios.get(
-      `${baseUrl}/businesses/search?term=${term}&latitude=${loc[0]}&longitude=${
-        loc[1]
+      `${baseUrl}/businesses/search?term=${term}&latitude=${loc[1]}&longitude=${
+        loc[0]
       }&limit=50`,
       config
     );
@@ -51,7 +52,18 @@ async function getNYCData() {
   }
   console.log(filteredBusinesses);
   console.log(filteredBusinesses.length);
+  fs.writeFileSync(
+    "./filteredB.json",
+    JSON.stringify(filteredBusinesses),
+    err => {
+      if (err) throw err;
+      console.log("done");
+    }
+  );
   // return filteredBusinesses.length;
 }
 
-getNYCData();
+// getNYCData();
+console.log(filteredB);
+
+// console.log(coords);

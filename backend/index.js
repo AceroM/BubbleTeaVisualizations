@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const filteredB = require("./filteredb.json");
 
 const app = express();
 
@@ -38,6 +39,14 @@ app.get("/yelp/reviews", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(400).send(err);
+  }
+});
+
+app.get("/nycdata", function(req, res) {
+  try {
+    res.send(filteredB);
+  } catch (err) {
+    console.error(err);
   }
 });
 
