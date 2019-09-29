@@ -1,36 +1,49 @@
 import React, { Component } from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import './Homepage.scss'
-import { Link } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 // // import Logo from "../../components/Logo";
 // import Card from '../../components/BubbleCard'
 
-import LocationSearchInput from '../../components/LocationSearchInput'
+// import LocationSearchInput from '../../components/LocationSearchInput'
 
 class Homepage extends Component {
   constructor(props) {
     super(props)
     this.state = {
       location: '',
+      latitude: '',
+      longitude: '',
+      isRedirect: false,
       err: '',
     }
   }
 
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
+  handleLocationSearch = location => {
+    fetch(`/location/${location}`)
+      .then(res => res.json())
+      .then(data => {
+        const { latitude, longitude } = data
+        this.setState({ latitude, longitude })
+        this.setState({ isRedirect: true })
+      })
+      .catch(err => {
+        this.setState({ err: JSON.stringify(err) })
+      })
   }
 
   setErr = err => {
     this.setState({ err })
   }
 
-  componentDidMount() {}
-
   render() {
-    const { err } = this.state
+    const { err, location, latitude, longitude, isRedirect } = this.state
+    if (isRedirect) {
+      const str = `/map?lat=${latitude}&lng=${longitude}`
+      return <Redirect to={str} />
+    }
     return (
       <div className="home-wrapper">
         <div>
@@ -42,15 +55,25 @@ class Homepage extends Component {
             <span className="input-group-label">
               <FontAwesomeIcon icon={faSearch} />
             </span>
-            <LocationSearchInput setErr={this.setErr} />
+            <input
+              type="text"
+              value={location}
+              onChange={e => {
+                this.setState({ location: e.target.value })
+              }}
+            />
+            <button onClick={() => this.handleLocationSearch(location)}>
+              GO
+            </button>
+            {/* <LocationSearchInput setErr={this.setErr} /> */}
           </div>
-          <input
+          {/* <input
             type="submit"
             placeholder="Enter your location"
             name="location"
             className="button primary white-color-text large"
             value="Go"
-          />
+          /> */}
         </div>
         {/* <Card title="testing" description="this" /> */}
       </div>

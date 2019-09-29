@@ -5,6 +5,8 @@ frontend/.DS_Store
 backend/.DS_Store
 
 package-lock.json
+frontend/package-lock.json
+
 config.json
 
 # dependencies

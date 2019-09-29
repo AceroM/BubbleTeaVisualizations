@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AceroM/BubbleTeaVisualizations/precache-manifest.78a2085f4d2c35adec83ab359989d97f.js"
+  "/AceroM/BubbleTeaVisualizations/precache-manifest.19ae1305623fd05a9ad2372d2cf88457.js"
 );
 
 self.addEventListener('message', (event) => {
