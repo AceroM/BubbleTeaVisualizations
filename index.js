@@ -1,8 +1,8 @@
-const express = require('express');
-const axios = require('axios');
-const path = require('path');
-const bodyParser = require('body-parser');
-const cityData = require('./data/nyc/full_city_tea.json');
+const express = require("express");
+const axios = require("axios");
+const path = require("path");
+const bodyParser = require("body-parser");
+const cityData = require("./data/nyc/full_city_tea.json");
 
 const app = express();
 
@@ -50,27 +50,31 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   }
 // });
 
-app.get('/location/:place', async function(req, res) {
+app.get("/location/:place", async function(req, res) {
   const { place } = req.params;
   try {
     const coords = await axios.get(`https://geo-info.co/${place}`);
     if (!coords.data[0].latitude) {
-      res.status(400).send({});
+      // default to new york cause why not
+      res.send({
+        latitude: 41.74028,
+        longitude: -117.08092
+      });
     }
     res.send({
       latitude: coords.data[0].latitude,
-      longitude: coords.data[1].longitude,
+      longitude: coords.data[1].longitude
     });
   } catch (err) {
     console.error(err);
   }
 });
 
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/frontend/build/index.html'));
+app.use(express.static(path.join(__dirname, "frontend", "build")));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
 });
 
 app.listen(5000, () => {
-  console.log('listening on port');
+  console.log("listening on port");
 });
