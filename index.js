@@ -57,8 +57,8 @@ app.get("/location/:place", async function(req, res) {
     if (!coords.data[0].latitude) {
       // default to new york cause why not
       res.send({
-        latitude: 41.74028,
-        longitude: -117.08092
+        latitude: 40.76361,
+        longitude: -73.97944
       });
     }
     res.send({

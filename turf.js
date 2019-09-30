@@ -2,6 +2,8 @@ const nta = require("./data/nyc/nyc_nta.json");
 const turf = require("@turf/turf");
 const fs = require("fs");
 
+const cityData = require("./data/nyc/full_city_tea.json");
+
 /**
  * @params {GeoJSON} nta - neightborhood geojson
  */
@@ -31,4 +33,20 @@ function removeNonNYfromGeoJSON(nta) {
   );
 }
 
-removeNonNYfromGeoJSON(nta);
+function filterNy(nta) {
+  const filteredPoints = cityData.filter(loc => {
+    const { latitude, longitude } = loc.coordinates;
+    const pt = turf.point([latitude, longitude]);
+    const bool = nta.features.some(b => {
+      return turf.booleanPointInPolygon(pt, b);
+    });
+    if (bool) {
+      console.log(loc);
+    }
+    return bool;
+  });
+  console.log(filteredPoints);
+}
+
+filterNy(nta);
+// removeNonNYfromGeoJSON(nta);

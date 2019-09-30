@@ -7,7 +7,7 @@ import "./Map.scss";
 function Map({ location }) {
   const maplocation = location.pathname.replace("/map/", "");
   return (
-    <div className="body-wrapper">
+    <div>
       <h1>Bubble Tea Heatmap</h1>
       <BubbleCartoMap />
       {/* <BubbleTeaMap location={maplocation} /> */}

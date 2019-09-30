@@ -4,6 +4,7 @@ import "./Homepage.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 // // import Logo from "../../components/Logo";
 // import Card from '../../components/BubbleCard'
 
@@ -44,7 +45,7 @@ class Homepage extends Component {
   render() {
     const { err, location, latitude, longitude, isRedirect } = this.state;
     if (isRedirect) {
-      const str = `/map?lat=${latitude}&lng=${longitude}`;
+      const str = `/map?lat=${latitude}&lng=${longitude}&place=${location}`;
       return <Redirect to={str} />;
     }
     return (

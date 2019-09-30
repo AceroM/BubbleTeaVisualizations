@@ -11,7 +11,8 @@ function NotFound() {
       <AbsoluteImage
         className="notfound"
         src={fourOhFour}
-        top={0}
+        left={"10vw"}
+        top={"-2vh"}
         imgWidth={"80vw"}
       />
       <h1> Your tea could not be found! </h1>

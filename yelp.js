@@ -3,6 +3,7 @@ const axios = require("axios");
 
 // offline files
 const coords = require("./data/nyc/full_city_tea_coords.json");
+const cityData = require("./data/nyc/full_city_tea.json");
 const { YELP_TOKEN } = require("./config.json");
 
 const baseUrl = "https://api.yelp.com/v3";
@@ -16,7 +17,7 @@ const config = {
  * @param {float} latitude
  * @param {float} longitude
  */
-export default async function yelp(latitude, longitude) {
+async function yelp(latitude, longitude) {
   const store = await axios.get(
     `${baseUrl}/businesses/search?term=${term}&latitude=${latitude}&longitude=${longitude}&limit=50`,
     config
@@ -59,4 +60,16 @@ async function getNYCData() {
   );
 }
 
+async function updateNYCdataWithReviews() {
+  let updated = cityData
+    .filter(place => place.location.state === "NY")
+    .map(place => ({
+      ...place,
+      price: place.price ? place.price.length : 0
+    }));
+  console.log(updated);
+  fs.writeFileSync("./data/nyc/ny_city_tea.json", JSON.stringify(updated));
+}
+
+updateNYCdataWithReviews();
 // getNYCData();
