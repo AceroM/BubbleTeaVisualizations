@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0a9f20d.chunk.css",
+    "main.js": "/static/js/main.28a9b0ea.chunk.js",
+    "main.js.map": "/static/js/main.28a9b0ea.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42ecad90.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42ecad90.js.map",
+    "static/js/2.7fce3aab.chunk.js": "/static/js/2.7fce3aab.chunk.js",
+    "static/js/2.7fce3aab.chunk.js.map": "/static/js/2.7fce3aab.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d9b72bddac0750031da0cfbfca82b252.js": "/precache-manifest.d9b72bddac0750031da0cfbfca82b252.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c0a9f20d.chunk.css.map": "/static/css/main.c0a9f20d.chunk.css.map",
+    "static/media/404.png": "/static/media/404.25ac9b7e.png",
+    "static/media/App.scss": "/static/media/bg-pattern-dark.9b0060a1.png",
+    "static/media/loading.png": "/static/media/loading.4511a8b2.png",
+    "static/media/milk.svg": "/static/media/milk.45691eb3.svg",
+    "static/media/stateastics.png": "/static/media/stateastics.a596b236.png"
+  }
+}
