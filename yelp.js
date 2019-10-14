@@ -4,6 +4,8 @@ const axios = require("axios");
 // offline files
 const coords = require("./data/nyc/full_city_tea_coords.json");
 const cityData = require("./data/nyc/full_city_tea.json");
+const nyTea = require("./data/nyc/ny_city_tea.json");
+const nyTeaWithReviews = require("./data/nyc/ny_places_with_reviews.json");
 const { YELP_TOKEN } = require("./config.json");
 
 const baseUrl = "https://api.yelp.com/v3";
@@ -71,5 +73,55 @@ async function updateNYCdataWithReviews() {
   fs.writeFileSync("./data/nyc/ny_city_tea.json", JSON.stringify(updated));
 }
 
-updateNYCdataWithReviews();
+// creating the super json
+async function getReviews(places) {
+  // https://api.yelp.com/v3/businesses/{id}/reviews
+
+  let updated = [];
+  for (let i = 0; i < places.length; i++) {
+    const review = await axios.get(
+      `${baseUrl}/businesses/${places[i].id}/reviews`,
+      config
+    );
+
+    const { data } = review;
+    const { reviews } = data;
+
+    updated.push({
+      ...places[i],
+      reviews
+    });
+  }
+
+  // const review = await axios.get(
+  // `${baseUrl}/businesses/${places[0].id}/reviews`,
+  // config
+  // );
+
+  // console.log("updated: ", JSON.stringify(updated));
+
+  fs.writeFileSync(
+    "./data/nyc/ny_places_with_reviews.json",
+    JSON.stringify(updated)
+  );
+}
+
+async function getReviewWords(places) {
+  const arr = [];
+  for (let place of places) {
+    const { reviews } = place;
+    reviews.forEach(r => {
+      arr.push(r.text);
+    });
+  }
+
+  fs.writeFileSync(
+    "./data/most_updated_data/reviews.json",
+    JSON.stringify(arr)
+  );
+}
+
+getReviewWords(nyTeaWithReviews);
+// getReviews(nyTea);
+// updateNYCdataWithReviews();
 // getNYCData();

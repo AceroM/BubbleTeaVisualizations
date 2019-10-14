@@ -9,8 +9,8 @@ function Map({ location }) {
   return (
     <div>
       <h1>Bubble Tea Heatmap</h1>
-      <BubbleCartoMap />
-      {/* <BubbleTeaMap location={maplocation} /> */}
+      {/* <BubbleCartoMap /> */}
+      <BubbleTeaMap location={maplocation} />
       {/* <h1>Bubble Tea Flavor Popularity</h1> */}
       {/* <BubbleTea /> */}
     </div>
