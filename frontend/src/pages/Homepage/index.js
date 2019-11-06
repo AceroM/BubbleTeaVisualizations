@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
-import "./Homepage.scss";
+import React, { Component } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import './Homepage.scss';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 // // import Logo from "../../components/Logo";
 // import Card from '../../components/BubbleCard'
@@ -14,11 +14,11 @@ class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: "",
-      latitude: "",
-      longitude: "",
+      location: '',
+      latitude: '',
+      longitude: '',
       isRedirect: false,
-      err: ""
+      err: '',
     };
   }
 
@@ -52,7 +52,7 @@ class Homepage extends Component {
       <div className="home-wrapper">
         <div>
           <h1>Find Bubble Tea Places Near You</h1>
-          {err && <h1 style={{ color: "red" }}>{err}</h1>}
+          {err && <h1 style={{ color: 'red' }}>{err}</h1>}
         </div>
         <div className="bmb-form-box">
           <div className="input-group">
@@ -66,9 +66,7 @@ class Homepage extends Component {
                 this.setState({ location: e.target.value });
               }}
             />
-            <button onClick={() => this.handleLocationSearch(location)}>
-              GO
-            </button>
+            <button onClick={() => this.handleLocationSearch(location)}>GO</button>
             {/* <LocationSearchInput setErr={this.setErr} /> */}
           </div>
           {/* <input
