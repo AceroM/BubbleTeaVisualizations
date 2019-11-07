@@ -4,6 +4,7 @@ import './BubbleCartoMap.scss';
 import { Map, TileLayer as Basemap } from 'react-leaflet';
 import carto from '@carto/carto.js';
 import trackPoints from './track_points';
+import Layer from './track_points';
 
 const CARTO_BASEMAP = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png';
 
@@ -29,7 +30,8 @@ function BubbleCartoMap() {
   const cartoCSS = new carto.style.CartoCSS(style);
   const layer = new carto.layer.Layer(cartoSource, cartoCSS);
 
-  client.addLayer(layer);
+  // client.addLayer(layer);
+  // client.getLeafletLayer().addTo(context.map);
 
   useEffect(() => {
     console.log(center);
@@ -43,8 +45,9 @@ function BubbleCartoMap() {
   return (
     <div>
       <h1> {getUrlParameter('place')} </h1>
-      <Map className="map" center={center} zoom={11}>
+      <Map className="map" center={center} zoom={zoom}>
         <Basemap attribution="" url={CARTO_BASEMAP} />
+        {/* <Layer source={trackPoints.source} style={trackPoints.style} client={client} hidden={false} /> */}
       </Map>
       {/* Have maybe a panel here that you can filter the map in live? */}
       {/* <div className="panel"> */}

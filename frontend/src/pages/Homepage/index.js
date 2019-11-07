@@ -7,6 +7,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 // // import Logo from "../../components/Logo";
 // import Card from '../../components/BubbleCard'
+import BubbleButton from '../../components/Styled/BubbleButton';
+import BubbleInput from '../../components/Styled/BubbleInput';
 
 // import LocationSearchInput from '../../components/LocationSearchInput'
 
@@ -57,16 +59,16 @@ class Homepage extends Component {
         <div className="bmb-form-box">
           <div className="input-group">
             <span className="input-group-label">
-              <FontAwesomeIcon icon={faSearch} />
+              <FontAwesomeIcon className="fa-icon" icon={faSearch} />
             </span>
-            <input
+            <BubbleInput
               type="text"
               value={location}
               onChange={e => {
                 this.setState({ location: e.target.value });
               }}
             />
-            <button onClick={() => this.handleLocationSearch(location)}>GO</button>
+            <BubbleButton onClick={() => this.handleLocationSearch(location)}>GO</BubbleButton>
             {/* <LocationSearchInput setErr={this.setErr} /> */}
           </div>
           {/* <input
