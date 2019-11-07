@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import NotFound from "./pages/NotFound";
 import Map from "./pages/Map";
+import WordCloud from "./pages/WordCloud";
 
 import Logo from "./components/Logo";
 // import Logo from "../../components/Logo";
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Homepage} />
             <Route path="/map/:location" component={Map} />
             <Route path="/map" component={Map} />
+            <Route path="/wordcloud" component={WordCloud} />
             <Route component={NotFound} />
           </Switch>
         </Router>
