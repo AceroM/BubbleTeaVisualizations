@@ -4,6 +4,7 @@ import Homepage from "./pages/Homepage";
 import NotFound from "./pages/NotFound";
 import Map from "./pages/Map";
 import WordCloud from "./pages/WordCloud";
+import Report from "./pages/Report";
 
 import Logo from "./components/Logo";
 // import Logo from "../../components/Logo";
@@ -22,6 +23,7 @@ function App() {
             <Route path="/map/:location" component={Map} />
             <Route path="/map" component={Map} />
             <Route path="/wordcloud" component={WordCloud} />
+            <Route path="/report" component={Report}/>
             <Route component={NotFound} />
           </Switch>
         </Router>
