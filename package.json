@@ -16,7 +16,8 @@
     "@turf/turf": "^5.1.6",
     "axios": "^0.19.0",
     "express": "^4.17.1",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "tableau-react": "^1.2.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.2"
