@@ -1,9 +1,8 @@
 .grid-container {
-  padding-right: .9375rem;
-  padding-left: .9375rem;
   width: 100%;
+  display: flex;
 
-  .logo{
+  .logo {
     height: 70px;
     width: 300px;
     padding: 15px;
