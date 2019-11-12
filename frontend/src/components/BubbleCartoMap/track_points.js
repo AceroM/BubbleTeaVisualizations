@@ -1,7 +1,12 @@
 export default {
   style: `
     #layer {
-      dot-width: 4;
+      marker-width: 6;
+      marker-fill-opacity: 1;
+      marker-allow-overlap: false;
+      marker-line-width: 0;
+      marker-comp-op: multiply;
+      marker-fill: grey;
     }
   `,
 

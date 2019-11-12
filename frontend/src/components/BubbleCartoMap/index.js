@@ -16,7 +16,10 @@ const getUrlParameter = name => {
 };
 
 function BubbleCartoMap() {
-  const [center, setCenter] = useState([parseFloat(getUrlParameter('lat')), parseFloat(getUrlParameter('lng'))]);
+  const defaultCenter = getUrlParameter('lat') ? [parseFloat(getUrlParameter('lat')), parseFloat(getUrlParameter('lng'))] : [40.758730, -73.829767]
+  const [center, setCenter] = useState(defaultCenter);
+
+  const [nativeMap, setNativeMap] = useState()
 
   const [zoom, setZoom] = useState(11);
 
@@ -25,13 +28,17 @@ function BubbleCartoMap() {
     username: 'acerom',
   });
 
-  const { source, style } = trackPoints;
-  const cartoSource = new carto.source.SQL(source);
-  const cartoCSS = new carto.style.CartoCSS(style);
-  const layer = new carto.layer.Layer(cartoSource, cartoCSS);
-
-  // client.addLayer(layer);
-  // client.getLeafletLayer().addTo(context.map);
+  useEffect(() => {
+    if(nativeMap){
+      const { source, style } = trackPoints;
+      const cartoSource = new carto.source.SQL(source);
+      const cartoCSS = new carto.style.CartoCSS(style);
+      const layer = new carto.layer.Layer(cartoSource, cartoCSS);
+      console.log( nativeMap)
+      client.addLayer(layer);
+      client.getLeafletLayer().addTo(nativeMap);
+    }
+  }, [nativeMap])
 
   useEffect(() => {
     console.log(center);
@@ -45,7 +52,7 @@ function BubbleCartoMap() {
   return (
     <div>
       <h1> {getUrlParameter('place')} </h1>
-      <Map className="map" center={center} zoom={zoom}>
+      <Map className="map" center={center} zoom={zoom} ref={node => { setNativeMap(node && node.leafletElement) }}>
         <Basemap attribution="" url={CARTO_BASEMAP} />
         {/* <Layer source={trackPoints.source} style={trackPoints.style} client={client} hidden={false} /> */}
       </Map>
