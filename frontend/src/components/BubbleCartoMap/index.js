@@ -16,10 +16,12 @@ const getUrlParameter = name => {
 };
 
 function BubbleCartoMap() {
-  const defaultCenter = getUrlParameter('lat') ? [parseFloat(getUrlParameter('lat')), parseFloat(getUrlParameter('lng'))] : [40.758730, -73.829767]
+  const defaultCenter = getUrlParameter('lat')
+    ? [parseFloat(getUrlParameter('lat')), parseFloat(getUrlParameter('lng'))]
+    : [40.75873, -73.829767];
   const [center, setCenter] = useState(defaultCenter);
 
-  const [nativeMap, setNativeMap] = useState()
+  const [nativeMap, setNativeMap] = useState();
 
   const [zoom, setZoom] = useState(11);
 
@@ -28,33 +30,50 @@ function BubbleCartoMap() {
     username: 'acerom',
   });
 
+  const { source, style } = trackPoints;
+  const cartoSource = new carto.source.SQL(source);
+
   useEffect(() => {
-    if(nativeMap){
-      const { source, style } = trackPoints;
-      const cartoSource = new carto.source.SQL(source);
+    if (nativeMap) {
       const cartoCSS = new carto.style.CartoCSS(style);
       const layer = new carto.layer.Layer(cartoSource, cartoCSS);
-      console.log( nativeMap)
+      console.log(nativeMap);
       client.addLayer(layer);
       client.getLeafletLayer().addTo(nativeMap);
     }
-  }, [nativeMap])
+  }, [nativeMap]);
 
-  useEffect(() => {
-    console.log(center);
-    fetch('/reviews')
-      .then(res => res.json())
-      .then(d => {
-        console.log(d);
-      });
-  }, []);
+  // useEffect(() => {
+  //   console.log(center);
+  //   fetch('/reviews')
+  //     .then(res => res.json())
+  //     .then(d => {
+  //       console.log(d);
+  //     });
+  // }, []);
 
   return (
     <div>
       <h1> {getUrlParameter('place')} </h1>
-      <Map className="map" center={center} zoom={zoom} ref={node => { setNativeMap(node && node.leafletElement) }}>
+      <button
+        onClick={() => {
+          cartoSource.setQuery(`SELECT * FROM cartodata WHERE rating = 4`);
+        }}
+      >
+        {' '}
+        CLICK{' '}
+      </button>
+      <Map
+        className="map"
+        center={center}
+        zoom={zoom}
+        ref={node => {
+          setNativeMap(node && node.leafletElement);
+        }}
+      >
         <Basemap attribution="" url={CARTO_BASEMAP} />
         {/* <Layer source={trackPoints.source} style={trackPoints.style} client={client} hidden={false} /> */}
+        <div className="legend">hello</div>
       </Map>
       {/* Have maybe a panel here that you can filter the map in live? */}
       {/* <div className="panel"> */}
