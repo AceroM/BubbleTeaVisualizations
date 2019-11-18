@@ -1,7 +1,19 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.toolbox {
+  padding: 20px;
+  max-width: 250px;
+  background-color: #fff;
+}
+
 .map {
+  flex: 1;
   border: 3mm ridge rgba(170, 50, 220, 0.6);
-  width: 90vw;
-  height: 75vh;
+  height: 80vh;
   margin: 0 auto;
   z-index: 3;
 }
