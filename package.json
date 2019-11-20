@@ -10,6 +10,10 @@
     "start": "node index.js",
     "start:dev": "nodemon index.js"
   },
+  "engines": {
+    "node": "10.17.0",
+    "npm": "6.x"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
