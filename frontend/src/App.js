@@ -6,7 +6,8 @@ import Map from "./pages/Map";
 import WordCloud from "./pages/WordCloud";
 import Report from "./pages/Report";
 
-import Logo from "./components/Logo";
+import NavBar from "./components/NavBar";
+// import Logo from "./components/Logo";
 // import Logo from "../../components/Logo";
 // import BubbleTea from "../../components/BubbleTea";
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div className="app">
       <div className="body-wrapper">
-        <Logo />
+        <NavBar />
         <Router>
           <Switch>
             <Route exact path="/" component={Homepage} />
