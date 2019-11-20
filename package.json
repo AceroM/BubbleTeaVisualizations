@@ -5,8 +5,7 @@
   "main": "index.js",
   "homepage": "https://intense-harbor-12748.herokuapp.com/",
   "scripts": {
-    "heroku-prebuild": "cd frontend && npm run build",
-    "heroku-postbuild": "echo index.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build",
     "start": "node index.js",
     "start:dev": "nodemon index.js"
   },
