@@ -1,0 +1,16 @@
+.grid-container {
+  width: 100%;
+  display: flex;
+
+  .logo {
+    height: 70px;
+    width: 300px;
+    padding: 15px;
+  }
+}
+
+.nav-bar {
+  width: 100%;
+  padding-top: 20px;
+  margin: auto 5% auto auto;
+}
