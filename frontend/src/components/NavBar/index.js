@@ -12,7 +12,13 @@ import './NavBar.scss';
 const NavComponent = ({ value, handleChange }) => (
   <div className="nav-bar">
     <BottomNavigation value={value} onChange={handleChange}>
-      <BottomNavigationAction className="tab" label="Map" value="map" icon={<MapTwoToneIcon />} href="/" />
+      <BottomNavigationAction
+        className="tab"
+        label="Map"
+        value="map"
+        icon={<MapTwoToneIcon />}
+        href="/map?lat=40.76361&lng=-73.98653&place=new%20york%20city"
+      />
       <BottomNavigationAction label="Word Cloud" value="cloud" icon={<FilterDramaTwoToneIcon />} href="/wordcloud" />
       <BottomNavigationAction label="Tableau Maps" value="report" icon={<BubbleChartTwoToneIcon />} href="/report" />
     </BottomNavigation>
