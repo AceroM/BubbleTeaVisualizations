@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cityData = require('./data/nyc/full_city_tea.json');
+const locationANDreviews = require('./data/most_updated_data/ny_places_with_reviews.json');
 const reviews = require('./data/most_updated_data/reviews.json');
 
 const app = express();
@@ -23,6 +23,15 @@ const PORT = process.env.PORT || 5000;
 //   }
 // });
 
+app.get('/yelp/review', async (req, res) => {
+  const { id } = req.query;
+  const found = locationANDreviews.find(p => p.id === id);
+  if (!found) {
+    res.sendStatus(404);
+  }
+  res.send(found.reviews);
+});
+
 // app.get("/yelp/reviews", async (req, res) => {
 //   reviewDict = {};
 //   const { lat, lng } = req.query;
@@ -42,14 +51,6 @@ const PORT = process.env.PORT || 5000;
 //   } catch (err) {
 //     console.error(err);
 //     res.status(400).send(err);
-//   }
-// });
-
-// app.get("/yelp/city", async function(req, res) {
-//   try {
-//     res.send(cityData);
-//   } catch (err) {
-//     console.error(err);
 //   }
 // });
 

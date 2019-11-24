@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './BubbleCartoMap.scss';
 
-import { Map, Marker, Popup, TileLayer as Basemap } from 'react-leaflet';
-import { defaultMarker } from './defaultMarker';
+import { Map, TileLayer as Basemap } from 'react-leaflet';
 import L from 'leaflet';
 import carto from '@carto/carto.js';
-import trackPoints from './track_points';
 
 // components
 import Input from '@material-ui/core/Input';
 import Checkbox from '@material-ui/core/Checkbox';
 import Slider from '@material-ui/core/Slider';
 import BubbleButton from '../Styled/BubbleButton';
+import { Modal } from '@material-ui/core';
+import MessageModal from '../MessageModal';
+import Review from '../Review';
 
 const CARTO_BASEMAP = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png';
 
@@ -26,6 +27,34 @@ const BubbleCartoMap = () => {
   const defaultCenter = getUrlParameter('lat')
     ? [parseFloat(getUrlParameter('lat')), parseFloat(getUrlParameter('lng'))]
     : [40.75873, -73.829767];
+  const yelpId = getUrlParameter('modal');
+  const storeName = getUrlParameter('store');
+  const [isModal, setModal] = useState(!!yelpId.length);
+
+  const source = 'SELECT * FROM cartodata';
+  const [cartoStyle, setCartoStyle] = useState(`
+    @fill: #bd7cc6;
+
+    #layer {
+      marker-width: [rating] * 2;
+      marker-allow-overlap: false;
+      marker-comp-op: multiply;
+
+      marker-fill-opacity: 1;
+      marker-fill: @fill;
+
+      marker-line-color: ramp([price], (#9ccb86, #e9e29c, #eeb479, #e88471, #cf597e), (1,2,3,4,5), >=);
+      marker-line-width: 1;
+      marker-line-opacity: 1;
+    }
+  `);
+
+  const changeStyle = color => {
+    let temp = cartoStyle;
+    temp = temp.split('\n');
+    temp[1] = `    @fill: ${color};`;
+    setCartoStyle(temp.join('\n'));
+  };
 
   // checkbox booleans
   const [ratingsBool, setRatingsBool] = useState(false);
@@ -49,7 +78,6 @@ const BubbleCartoMap = () => {
     username: 'acerom',
   });
 
-  const { source, style } = trackPoints;
   const [querySource, setQuerySource] = useState(undefined);
 
   const createFilters = () => {
@@ -80,30 +108,38 @@ const BubbleCartoMap = () => {
     }
   };
 
-  const popup = L.popup({ closeButton: false });
+  let popup = L.popup({ closeButton: false });
 
   function openPopup(featureEvent) {
-    let content = '<div class="widget">';
+    const { name, address, zip_code, price, rating, id } = featureEvent.data;
 
-    if (featureEvent.data.name) {
-      content += `<h2 class="h2">${featureEvent.data.name}</h2>`;
+    const r = rating.toString();
+    const isFull = r.length === 1;
+    let stars = '';
+
+    if (isFull) {
+      stars += '<div class="clip-star"></div>'.repeat(parseInt(r));
+    } else {
+      stars += '<div class="clip-star"></div>'.repeat(parseInt(r[0]));
+      stars += '<div class="clip-star half"></div>';
     }
 
-    if (featureEvent.data.pop_max || featureEvent.data.pop_min) {
-      content += `<ul>`;
-
-      if (featureEvent.data.pop_max) {
-        content += `<li><h3>Max:</h3><p class="open-sans">${featureEvent.data.pop_max}</p></li>`;
-      }
-
-      if (featureEvent.data.pop_min) {
-        content += `<li><h3>Min:</h3><p class="open-sans">${featureEvent.data.pop_min}</p></li>`;
-      }
-
-      content += `</ul>`;
-    }
-
-    content += `</div>`;
+    const content = `
+      <div class="widget">
+        <h1> ${name} </h1>
+        <h2> <b>Address:</b> ${address}, ${zip_code}</h2>
+        <h2> <b>Price:</b> ${price} </h2>
+        <div class="stars">
+          <h2><b>Rating:</b></h2>
+          ${stars}
+        </div>
+        <a
+          href="/map?lat=40.76361&lng=-73.98653&place=new%20york%20city&modal=${id}&store=${name}"
+          class="widget-button"
+        > Review Stats
+        </a>
+      </div>
+    `;
 
     popup.setContent(content);
     popup.setLatLng(featureEvent.latLng);
@@ -112,16 +148,38 @@ const BubbleCartoMap = () => {
     }
   }
 
-  function closePopup(featureEvent) {
-    popup.removeFrom(nativeMap);
-  }
+  const [reviews, setReviews] = useState([]);
+  const getReviews = id => {
+    fetch(`/yelp/review?id=${id}`)
+      .then(res => res.json())
+      .then(data => {
+        console.log('data: ', data);
+        setReviews(data);
+      })
+      .catch(err => {
+        alert(JSON.stringify(err));
+      });
+  };
+
+  const reviewContent = reviews.map(r => {
+    const props = {
+      rating: r.rating,
+      text: r.text,
+      time_created: r.time_created,
+      name: r.user.name,
+      image_url: r.user.image_url,
+    };
+    return <Review {...props} />;
+  });
 
   useEffect(() => {
     if (nativeMap) {
       const cartoSource = new carto.source.SQL(source);
       setQuerySource(cartoSource);
-      const cartoCSS = new carto.style.CartoCSS(style);
-      const layer = new carto.layer.Layer(cartoSource, cartoCSS);
+      const cartoCSS = new carto.style.CartoCSS(cartoStyle);
+      const layer = new carto.layer.Layer(cartoSource, cartoCSS, {
+        featureOverColumns: ['name', 'address', 'zip_code', 'rating', 'price', 'id'],
+      });
       layer.off('featureOver');
       layer.off('featureOut');
       layer.on('featureClicked', openPopup);
@@ -133,6 +191,25 @@ const BubbleCartoMap = () => {
 
   return (
     <div>
+      <Modal
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        open={isModal}
+        onClose={() => setModal(false)}
+      >
+        {/* <div className="modal">hello</div> */}
+        <div className="modal-container">
+          <div className="gap" />
+          <MessageModal
+            closeModal={() => setModal(false)}
+            openModal={() => getReviews(yelpId)}
+            className="modal"
+            title={storeName}
+          >
+            <div className="modal-stuff">{reviewContent.length ? reviewContent : <p>Loading</p>}</div>
+          </MessageModal>
+        </div>
+      </Modal>
       <div className="container">
         <aside className="toolbox">
           <div className="box">
@@ -221,11 +298,6 @@ const BubbleCartoMap = () => {
           }}
         >
           <Basemap attribution="" url={CARTO_BASEMAP} />
-          <Marker position={[40.75873, -73.829767]} marker={defaultMarker}>
-            <Popup>
-              <div> hello</div>
-            </Popup>
-          </Marker>
           {/* <Layer source={trackPoints.source} style={trackPoints.style} client={client} hidden={false} /> */}
         </Map>
       </div>

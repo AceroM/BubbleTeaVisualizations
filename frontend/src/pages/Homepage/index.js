@@ -9,7 +9,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 // import Card from '../../components/BubbleCard'
 import BubbleButton from '../../components/Styled/BubbleButton';
 import BubbleInput from '../../components/Styled/BubbleInput';
-
 // import LocationSearchInput from '../../components/LocationSearchInput'
 
 class Homepage extends Component {
