@@ -32,18 +32,20 @@ const BubbleCartoMap = () => {
   const [isModal, setModal] = useState(!!yelpId.length);
 
   const source = 'SELECT * FROM cartodata';
+  // marker-line-color: ramp([price], (#9ccb86, #e9e29c, #eeb479, #e88471, #cf597e), (1,2,3,4,5), >=);
+  // TODO: change marker size
+  // TODO: maybe i can set the colors in local storage (use uselocalstorage) for custom bubbel tea color settings
   const [cartoStyle, setCartoStyle] = useState(`
-    @fill: #bd7cc6;
-
     #layer {
       marker-width: [rating] * 2;
       marker-allow-overlap: false;
       marker-comp-op: multiply;
 
+      marker-fill:ramp([price], (#9ccb86, #e9e29c, #eeb479, #e88471, #cf597e), (1,2,3,4,5), >=);
       marker-fill-opacity: 1;
       marker-fill: @fill;
 
-      marker-line-color: ramp([price], (#9ccb86, #e9e29c, #eeb479, #e88471, #cf597e), (1,2,3,4,5), >=);
+      marker-line-color: #bd7cc6;
       marker-line-width: 1;
       marker-line-opacity: 1;
     }

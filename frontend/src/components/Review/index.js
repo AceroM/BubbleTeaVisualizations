@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import './Review.scss';
 
 const Review = ({ rating, text, time_created, name, image_url }) => {
