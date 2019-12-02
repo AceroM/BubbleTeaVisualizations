@@ -11,6 +11,7 @@ import {
   CancelButton,
 } from './styles';
 import { $fontColor, $okColor, $cancelColor, $mainColor, $subColor } from './colors';
+import WordCloudModal from '../WordCloudModal';
 
 const Header = ({ title, fontColor = $fontColor, mainColor = $mainColor, subColor = $subColor, isOpenMessage }) => (
   <HeaderWrapper data-open={isOpenMessage} mainColor={mainColor} subColor={subColor}>
@@ -28,8 +29,12 @@ const MainColumn = ({
   getMessageHeight,
   messageHeight,
 }) => (
+  console.log(children),
   <MainColumnWrapper messageHeight={messageHeight} data-open={isOpenMessage} subColor={subColor} fontColor={fontColor}>
-    <Inner className="message-modal__inner">{children}</Inner>
+    <Inner className="message-modal__inner">
+      <WordCloudModal reviewData={children}/>
+      {children}
+    </Inner>
   </MainColumnWrapper>
 );
 
