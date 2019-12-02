@@ -32,7 +32,7 @@ const MainColumn = ({
   console.log(children),
   <MainColumnWrapper messageHeight={messageHeight} data-open={isOpenMessage} subColor={subColor} fontColor={fontColor}>
     <Inner className="message-modal__inner">
-      <WordCloudModal/>
+      <WordCloudModal reviewData={children}/>
       {children}
     </Inner>
   </MainColumnWrapper>

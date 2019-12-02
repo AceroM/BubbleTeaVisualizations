@@ -10,23 +10,7 @@ class WordCloudModal extends Component {
       wordCountArr: null,
     };
   }
-
-  componentWillMount() {
-    this.fetchData();
-  }
-
-  fetchData() {
-    fetch('/reviews')
-      .then(res => res.json())
-      .then((responseJson) => {
-        console.log(responseJson)
-        this.setState({ wordCountArr: this.countWords(responseJson) });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-
+  
   countWords(data) {
     let wordCount = {};
     let output = [];
@@ -57,8 +41,20 @@ class WordCloudModal extends Component {
     return output;
   }
 
+  parseData(data) {
+    let ret = []
+    for (let i = 0; i < data.length; i++) {
+      let entry = data[i].props.text;
+      ret.push(entry);
+    }
+    const ans = this.countWords(ret);
+    return ans;
+  }
+
   render() {
     const { data, wordCountArr } = this.state;
+    const { reviewData } = this.props;
+    const arrReviewData = this.parseData(reviewData.props.children);
     const resizeStyle = {
       height: '50%',
       width: '100%',
@@ -86,9 +82,9 @@ class WordCloudModal extends Component {
 
     return (
       <div align="center">
-        {this.state.wordCountArr ?
+        {arrReviewData ?
           <div style={resizeStyle} >
-            <ReactWordcloud words={wordCountArr} options={options} />
+            <ReactWordcloud words={arrReviewData} options={options} />
           </div>
           : <p>NO DATA</p>
         }
